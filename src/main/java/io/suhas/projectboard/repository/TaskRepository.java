@@ -7,4 +7,6 @@ import io.suhas.projectboard.model.Task;
 
 @Repository
 public interface TaskRepository extends CrudRepository<Task, Long> {
+	
+	public Task getById(Long id);
 }
