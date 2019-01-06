@@ -1,11 +1,13 @@
 import React, { Component } from "react";
 import Task from "./Task";
+import CreateUpdateTask from "./CreateUpdateTask";
 
 class ProjectBoard extends Component {
+
   render() {
     return (
       <div className="container-fluid">
-        <button className="col-md-1.5 btn btn-info">Create a new task</button>
+        <button className="col-md-1.5 btn btn-info" onClick={this.createTask}>Create a new task</button>
 
         <div className="row">
           <div id="todo" className="col-sm">
@@ -27,6 +29,7 @@ class ProjectBoard extends Component {
             <Task />
             <Task />
           </div>
+          <CreateUpdateTask />
         </div>
       </div>
     );
